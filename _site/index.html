@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8" />
+    <title>demo</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/iconfont.css" />
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <!-- header nav -->
+  <header id="header">
+    <nav class="navbar container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="images/logo.png" width="82px" height="50px" class="img-responsive" /></a>
+      </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="container contents">
+        <ul class="nav navbar-nav collapse navbar-collapse" id="navbar-collapse">
+          <li><a href="#">学习中心</a></li>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">课程 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </div>
+          <li><a href="#">学习中心</a></li>
+          <li><a href="#">学习中心</a></li>
+        </ul>
+        <div class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-right pull-left hidden-xs">
+            <div class="dropdown pull-left">
+              <a href="#" class="dropdown-toggle hidden-md hidden-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn glyphicon glyphicon-search"></button>
+          </form>
+          <div class="login pull-right">
+            <a href="#">登陆</a>
+            <a href="#">注册</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- banner -->
+  <section id="banner" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#banner" data-slide-to="0" class="active"></li>
+      <li data-target="#banner" data-slide-to="1"></li>
+      <li data-target="#banner" data-slide-to="2"></li>
+      <li data-target="#banner" data-slide-to="3"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <a style="background-image: url(images/block_picture_1471493110.jpg);" href="javascript:;"></a>
+      </div>
+      <div class="item">
+        <a style="background-image: url(images/block_picture_1470403193.jpg);" href="javascript:;"></a>
+      </div>
+      <div class="item">
+        <a style="background-image: url(images/block_picture_1474275464.jpg);" href="javascript:;"></a>
+      </div>
+      <div class="item">
+        <a style="background-image: url(images/block_picture_1468976358.jpg);" href="javascript:;"></a>
+      </div>
+    </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#banner" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+    </a>
+    <a class="right carousel-control" href="#banner" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </a>
+    <!-- data -->
+    <div class="site-data hidden-sm hidden-xs">
+      <div class="data">
+        <p class="line-left">现在</p>
+        <div class="number">
+          <strong>4744</strong>
+          <p class="text">
+            人在好知<br>
+            学习课程
+          </p>
+        </div>
+      </div>
+      <a href="javascript:;" class="text-center">
+        立即学习
+      </a>
+    </div>
+  </section>
+
+  <!-- hot lesson -->
+  <section class="carousel slide container" data-ride="carousel" id="hot-lesson">
+    <div class="container">
+      <h2><span>热门课程</span></h2>
+    </div>
+    <!-- items -->
+    <div class="row carousel-inner center-block" role="listbox">
+      <div class="item active">
+        <a class="col-xs-6" href="#">
+          <div class="msg-show">
+            <div class="live-title"><h3 class="text-center">sai基础教程</h3></div>                  
+            <p class="text-center">
+              <span>加入学员:23090人</span>
+            </p>      
+          </div>
+          <div class="msg-hover hidden-sm hidden-xs">
+            <img class="avatar-top" src="images/avt.jpg" alt="" />
+            <p class="up-name">up主名字</p>
+            <p class="count">现在参加，12312人已经加入课程</p>
+            <p class="avatar-group">
+              <img src="images/avt.jpg" alt="" />
+              <img src="images/avt.jpg" alt="" />
+              <img src="images/avt.jpg" alt="" />
+              <span>…</span>
+            </p>
+          </div>
+          <img class="img-responsive" src="images/0652215cebbc706663.jpg" alt="">
+        </a>
+        <a class="col-xs-6" href="#">
+          <div class="msg-show">
+            <div class="live-title"><h3 class="text-center">sai基础教程</h3></div>                  
+            <p class="text-center">
+              <span>加入学员:23090人</span>
+            </p>      
+          </div>
+          <img class="img-responsive" src="images/065346a73da0138994.jpg" alt="">
+        </a>
+      </div>
+      <div class="item">
+        <a class="col-xs-6" href="#"><img class="img-responsive" src="images/065523b78450837537.jpg" alt=""></a>
+        <a class="col-xs-6" href="#"><img class="img-responsive" src="images/160442a63a30885777.png" alt=""></a>
+      </div>
+    </div>
+    <!-- Controls -->
+    <a class="left control" href="#hot-lesson" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+    </a>
+    <a class="right control" href="#hot-lesson" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+    </a>
+    <div class="more container"><a href="javascript:;">更多&gt;</a></div>
+  </section>
+
+  <!-- prime lesson -->
+  <section class="container prime-lesson">
+    <div class="container">
+      <h2><span>精品课程</span></h2>
+    </div>
+    <ul class="classify">
+      <li class="active">精品推荐</li>
+      <li>精品推荐</li>
+      <li>精品推荐</li>
+      <li>精品推荐</li>
+      <li>精品推荐</li>
+      <li>精品推荐</li>
+      <li>精品推荐</li>
+      <li>精品推荐</li>
+    </ul>
+    <ul class="item-list container">
+      <li class="col-sm-3 col-xs-6">
+        <a href="javascript:;"><img class="main" src="images/tb-photo.jpg" alt="xxxx" /></a>
+        <div class="lesson-msg">
+          <div class="title">
+            <a href="javascript:;">快速上手淘宝摄影</a>
+          </div>
+          <div class="user">
+            <div class="person" data-toggle="popover" tabindex="0" role="button">
+              <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
+              <span class="username">userName</span>
+              <i class="icon-daren" title="达人" daren="1"></i>
+            </div>
+            <span class="price" price="99.00">￥99.00</span>
+          </div>
+        </div>
+      </li>
+      <li class="col-sm-3 col-xs-6">
+        <div class="item1">
+          <a href="javascript:;"><img class="main" src="images/jp-01.jpg" alt="xxxx" /></a>
+          <div class="lesson-msg">
+            <div class="title">
+              <a href="javascript:;">快速上手淘宝摄影</a>
+            </div>
+            <div class="user">
+              <div class="person" data-toggle="popover" tabindex="0" role="button">
+                <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
+                <span class="username">userName</span>
+                <i class="icon-daren" title="达人" daren="0"></i>
+              </div>
+              <span class="price" price="0">免费</span>
+            </div>
+          </div>
+        </div>
+        <div class="item2">
+          <a href="javascript:;"><img class="main" src="images/jp-02.jpg" alt="xxxx" /></a>
+          <div class="lesson-msg">
+            <div class="title">
+              <a href="javascript:;">快速上手淘宝摄影</a>
+            </div>
+            <div class="user">
+              <div class="person" data-toggle="popover" tabindex="0" role="button">
+                <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
+                <span class="username">userName</span>
+                <i class="icon-daren" title="达人" daren="0"></i>
+              </div>
+              <span class="price" price="0">免费</span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-sm-3 col-xs-6">
+        <div class="item1">
+          <a href="javascript:;"><img class="main" src="images/jp-03.jpg" alt="xxxx" /></a>
+          <div class="lesson-msg">
+            <div class="title">
+              <a href="javascript:;">快速上手淘宝摄影</a>
+            </div>
+            <div class="user">
+              <div class="person" data-toggle="popover" tabindex="0" role="button">
+                <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
+                <span class="username">userName</span>
+                <i class="icon-daren" title="达人" daren="0"></i>
+              </div>
+              <span class="price" price="0">免费</span>
+            </div>
+          </div>
+        </div>
+        <div class="item2">
+          <a href="javascript:;"><img class="main" src="images/jp-04.jpg" alt="xxxx" /></a>
+          <div class="lesson-msg">
+            <div class="title">
+              <a href="javascript:;">快速上手淘宝摄影</a>
+            </div>
+            <div class="user">
+              <div class="person" data-toggle="popover" tabindex="0" role="button">
+                <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
+                <span class="username">userName</span>
+                <i class="icon-daren" title="达人" daren="0"></i>
+              </div>
+              <span class="price" price="0">免费</span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-sm-3 col-xs-6">
+        <div class="item1">
+          <a href="javascript:;"><img class="main" src="images/jp-05.jpg" alt="xxxx" /></a>
+          <div class="lesson-msg">
+            <div class="title">
+              <a href="javascript:;">快速上手淘宝摄影</a>
+            </div>
+            <div class="user">
+              <div class="person" data-toggle="popover" tabindex="0" role="button">
+                <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
+                <span class="username">userName</span>
+                <i class="icon-daren" title="达人" daren="0"></i>
+              </div>
+              <span class="price" price="0">免费</span>
+            </div>
+          </div>
+        </div>
+        <div class="item2">
+          <a href="javascript:;"><img class="main" src="images/jp-06.jpg" alt="xxxx" /></a>
+          <div class="lesson-msg">
+            <div class="title">
+              <a href="javascript:;">快速上手淘宝摄影</a>
+            </div>
+            <div class="user">
+              <div class="person" data-toggle="popover" tabindex="0" role="button">
+                <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
+                <span class="username">userName</span>
+                <i class="icon-daren" title="达人" daren="0"></i>
+              </div>
+              <span class="price" price="0">免费</span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="more container" style="margin-top: -40px; position: relative;"><a href="javascript:;">更多&gt;</a></div>
+  </section>
+
+  <!-- class rec -->
+  <section class="container class-rec">
+    <div class="container">
+      <h2><span>班级推荐</span></h2>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <div class="thumbnail">
+          <div class="classroom-tag"><span>班级</span></div>
+          <img src="images/classroom.png" alt="">
+          <div class="caption">
+            <h3>啊是否看好家啊</h3>
+            <p>爱是开发商开发符合看见爱上房间卡收费卡刷卡房间爱好开发和会计法开始放假卡就卡死飞机暗示法萨芬三</p>
+            <a href="javascript:;" class="btn btn-default" role="button">立即加入</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div class="thumbnail">
+          <div class="classroom-tag"><span>班级</span></div>
+          <img src="images/classroom.png" alt="">
+          <div class="caption">
+            <h3>啊是否看好家啊</h3>
+            <p>爱是开发商开发符合看见爱上房间卡收费卡刷卡房间爱好开发和会计法开始放假卡就卡死飞机暗示法萨芬三</p>
+            <a href="javascript:;" class="btn btn-default" role="button">立即加入</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div class="thumbnail">
+          <div class="classroom-tag"><span>班级</span></div>
+          <img src="images/classroom.png" alt="">
+          <div class="caption">
+            <h3>啊是否看好家啊</h3>
+            <p>爱是开发商开发符合看见爱上房间卡收费卡刷卡房间爱好开发和会计法开始放假卡就卡死飞机暗示法萨芬三</p>
+            <a href="javascript:;" class="btn btn-default" role="button">立即加入</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div class="thumbnail">
+          <div class="classroom-tag"><span>班级</span></div>
+          <img src="images/classroom.png" alt="">
+          <div class="caption">
+            <h3>啊是否看好家啊</h3>
+            <p>爱是开发商开发符合看见爱上房间卡收费卡刷卡房间爱好开发和会计法开始放假卡就卡死飞机暗示法萨芬三</p>
+            <a href="javascript:;" class="btn btn-default" role="button">立即加入</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="more container" style="margin-top: 0;"><a style="margin-right: 0; position: relative;" href="javascript:;">更多&gt;</a></div>
+  </section>
+
+  <!-- talks -->
+  <section class="container talks">
+    <div class="container">
+      <h2><span>话题精选</span></h2>
+    </div>
+    <div class="carousel slide" data-ride="carousel" id="talks">
+      <!-- items -->
+      <div class="row carousel-inner center-block" role="listbox">
+        <div class="item active">
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1473300683.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1473303419.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1483955463.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1483955463.jpg" alt=""></a>
+        </div>
+        <div class="item">
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1473303419.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1483955463.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1473300683.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1483955463.jpg" alt=""></a>
+        </div>
+      </div>
+      <!-- Controls -->
+      <a class="left control" href="#talks" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+      </a>
+      <a class="right control" href="#talks" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="more container"><a style="margin-right: 0; position: relative;" href="javascript:;">更多&gt;</a></div>
+  </section>
+
+  <!-- tags -->
+  <section class="container tags">
+    <div class="container">
+      <h2><span>热门标签</span></h2>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <a href="javascript:;">
+          <img class="center-block" src="images/tag1.jpg" alt="" />
+          <p>
+            asfasfaa<br />
+            <span>asfasffas</span>
+          </p>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <a href="javascript:;">
+          <img class="center-block" src="images/tag2.jpg" alt="" />
+          <p>
+            asfasfaa<br />
+            <span>asfasffas</span>
+          </p>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <a href="javascript:;">
+          <img class="center-block" src="images/tag3.jpg" alt="" />
+          <p>
+            asfasfaa<br />
+            <span>asfasffas</span>
+          </p>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <a href="javascript:;">
+          <img class="center-block" src="images/tag4.jpg" alt="" />
+          <p>
+            asfasfaa<br />
+            <span>asfasffas</span>
+          </p>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <a href="javascript:;">
+          <img class="center-block" src="images/tag5.jpg" alt="" />
+          <p>
+            asfasfaa<br />
+            <span>asfasffas</span>
+          </p>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <a href="javascript:;">
+          <img class="center-block" src="images/tag6.jpg" alt="" />
+          <p>
+            asfasfaa<br />
+            <span>asfasffas</span>
+          </p>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <a href="javascript:;">
+          <img class="center-block" src="images/tag7.jpg" alt="" />
+          <p>
+            asfasfaa<br />
+            <span>asfasffas</span>
+          </p>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <a href="javascript:;">
+          <img class="center-block" src="images/tag8.jpg" alt="" />
+          <p>
+            asfasfaa<br />
+            <span>asfasffas</span>
+          </p>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <a href="javascript:;">
+          <img class="center-block" src="images/tag9.jpg" alt="" />
+          <p>
+            asfasfaa<br />
+            <span>asfasffas</span>
+          </p>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <a href="javascript:;">
+          <img class="center-block" src="images/tag10.jpg" alt="" />
+          <p>
+            asfasfaa<br />
+            <span>asfasffas</span>
+          </p>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <a href="javascript:;">
+          <img class="center-block" src="images/tag11.jpg" alt="" />
+          <p>
+            asfasfaa<br />
+            <span>asfasffas</span>
+          </p>
+        </a>
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-4">
+        <a href="javascript:;">
+          <img class="center-block" src="images/tag12.jpg" alt="" />
+          <p>
+            asfasfaa<br />
+            <span>asfasffas</span>
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- bottom banner -->
+  <section class="bottom container-fluid hidden-xs">
+    <div class="container">
+      <ul class="row">
+        <li class="col-xs-4">
+          <a href="javascript:;">
+            <img class="center-block" src="images/bottom-item1.png" alt="" />
+            <p>blablabla</p>
+          </a>
+        </li>
+        <li class="col-xs-4">
+          <a href="javascript:;">
+            <img class="center-block" src="images/bottom-item2.png" alt="" />
+            <p>blablabla</p>
+          </a>
+        </li>
+        <li class="col-xs-4">
+          <a href="javascript:;">
+            <img class="center-block" src="images/bottom-item3.png" alt="" />
+            <p>blablabla</p>
+          </a>
+        </li>
+      </ul>
+      <a href="javascript:;">更有趣更有效学习 <i class="glyphicon glyphicon-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <ul class="container row center-block">
+      <!-- foot logo -->
+      <li class="col-md-4">
+        <a href="javascript:;"><img class="center-block" src="images/foot-logo.png" alt="" /></a>
+      </li>
+      <!-- about -->
+      <li class="col-md-4">
+        <span><a href="javascript:;">关于我们</a></span>|
+        <span><a href="javascript:;">加入我们</a></span>|
+        <span><a href="javascript:;">合作申请</a></span>|
+        <span><a href="javascript:;">意见反馈</a></span><br>
+        <a href="javascript:;">浙ICP备XXXXXXX号XXX</a>
+        <a href="javascript:;">浙B2-XXXXXXX</a>
+      </li>
+      <!-- icons -->
+      <li class="col-md-4">
+        关注我们：
+        <a class="iconfont icon-qq" href="javascript:;"></a>
+        <a class="iconfont icon-weibo" href="javascript:;"></a>
+        <a class="iconfont icon-weixin" href="javascript:;"><img src="images/weichat.png" alt="" /></a>
+        <a class="iconfont icon-github" href="javascript:;"></a>
+      </li>
+    </ul>
+  </footer>
+
+  <!-- friends -->
+  <div class="friends">
+    <div class="container">
+      <div class="links">
+        <a href="javascript:;">变速阀师父</a><span>|</span>
+        <a href="javascript:;">变速阀师父</a><span>|</span>
+        <a href="javascript:;">变速阀师父</a><span>|</span>
+        <a href="javascript:;">变速阀师父</a><span>|</span>
+        <a href="javascript:;">变速阀师父</a><span>|</span>
+        <a href="javascript:;">变速阀师父</a><span>|</span>
+      </div>
+      <p class="powered">powered by xxxxx</p>
+    </div>
+  </div>
+
+  <!-- fixed handle-bar -->
+  <ul class="handle-bar">
+    <li class="wechat glyphicon glyphicon-qrcode">
+      <div class="qrcode">
+        <p class="hidden-xs hidden-sm">扫一扫关注微信</p>
+        <img class="img-responsive" src="images/wenxin-qrcode.jpg" alt="" />
+      </div>
+    </li>
+    <li class="help glyphicon glyphicon-send"><a href="javascript:;">问题<br />反馈</a></li>
+    <li class="to-top glyphicon glyphicon-upload"><a href="#header">回到<br />顶部</a></li>
+  </ul>
+
+</body>
+<script src="js/jquery-3.1.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+  function async(u, c) {
+      const t = 'script',
+      [ o, s ] = [ document.createElement(t), document.getElementsByTagName(t)[0] ];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+  }
+  async('js/angular.min.js');
+  async('js/index.js');
+</script>
+</html>

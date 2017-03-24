@@ -1,0 +1,145 @@
+@mixin inputOutlineNone() {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+@mixin hover() {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+@mixin clearFix() {
+  &:after {
+    content:'';
+    display:block;
+    clear:both;
+  }
+  zoom: 1;
+}
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin popover() {
+  .popover{
+    z-index: 3;
+    min-width: 200px;
+    max-width: 326px;
+    border-color: #e1e1e1;
+    .popover-title {
+      border-bottom: none;
+      padding: 15px;
+      min-height: 95px;
+      .avatar {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        float: left;
+        margin-right: 15px;
+        img {
+          border-radius: 30px;
+        }
+        .icon {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 20px;
+          height: 20px;
+          border: 2px solid #fff;
+          border-radius: 10px;
+          background: #ff9445 url(../images/daren-icon-trans.png) no-repeat 3px center;
+          display: none;
+          &[daren="1"] {
+            display: block;
+          }
+        }
+      }
+      .user-info {
+        float: left;
+        a {
+          color: #666;
+          font-size: 14px;
+          &:hover,
+          &:focus,
+          &:active {
+            text-decoration: none;
+            color: $mColor;
+            transition-duration: .3s;
+          }
+        }
+        p {
+          font-size: 12px;
+          margin-top: 6px;
+          color: #919191;
+        }
+      }
+      .handler {
+        padding-left: 257px;
+        padding-right: 5px;
+        a {
+          text-decoration: none;
+          width: 36px;
+          height: 22px;
+          border: 1px solid $mColor;
+          line-height: 20px;
+          margin-bottom: 12px;
+          font-size: 12px;
+          text-align: center;
+          transition-duration: .3s;
+          &.like {
+            background-color: $mColor;
+            color: #fff;
+            @include hover {
+              background-color: #13ab78;
+            }
+          }
+          &.pm {
+            color: $mColor;
+            background-color: #fff;
+            @include hover {
+              background-color: $mColor;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .popover-content {
+      margin: 0;
+      padding: 0;
+      line-height: 24px;
+      color: #919191;
+      p {
+        padding: 20px 0;
+        margin: 0 20px;
+      }
+      .row {
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid #f5f5f5;
+        li {
+          list-style: none;
+          margin: 5px 0;
+          border-right: 1px solid #f5f5f5;
+          &:nth-last-child(1) {
+            border: none;
+          }
+          a {
+            line-height: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #616161;
+            transition-duration: .3s;
+            @include hover {
+              color: $mColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
