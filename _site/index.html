@@ -1,73 +1,77 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-Hans" ng-app="index">
 <head>
     <meta charset="utf-8" />
-    <title>demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>好知网</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/iconfont.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <script src="js/fastclick.min.js"></script>
+    <script>
+      if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body);
+        }, false);
+      }
+    </script>
 </head>
 <body>
   <!-- header nav -->
-  <header id="header">
+  <header id="header" ng-controller="h-ctrl">
     <nav class="navbar container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"><img src="images/logo.png" width="82px" height="50px" class="img-responsive" /></a>
+        <button type="button" class="navbar-toggle glyphicon glyphicon-list" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle navigation</span></button>
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" width="82px" height="50px" class="img-responsive" /></a>
       </div>
-      
+      <div class="collapse-bar">
+        <ul>
+          <li><a href="javascript:;"><i class="glyphicon glyphicon-search"></i>搜索</a></li>
+          <li><a href="javascript:;">学习中心</a></li>
+          <li><a href="javascript:;">课程</a></li>
+          <li><a href="javascript:;">班级</a></li>
+          <li><a href="javascript:;">小组</a></li>
+        </ul>
+      </div>
+      <div class="login-collapse"> <a href="#">登陆</a> <a href="#">注册</a> </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="container contents">
-        <ul class="nav navbar-nav collapse navbar-collapse" id="navbar-collapse">
-          <li><a href="#">学习中心</a></li>
-          <div class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">课程 <span class="caret"></span></a>
+      <div class="container contents hidden-xs">
+        <ul class="nav navbar-nav collapse navbar-collapse">
+          <li><a href="center.html">学习中心</a></li>
+          <div class="dropdown"> <a href="lessons.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">课程 <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+              <li ng-repeat="k in dataset"><a href="{{k.url}}">{{k.class}}</a></li>
+              <!-- <li><a href="lessons.html">课程分类</a></li> -->
+              <!-- <li><a href="lessons.html">课程分类</a></li> -->
+              <!-- <li><a href="lessons.html">课程分类</a></li> -->
+              <!-- <li><a href="lessons.html">课程分类</a></li> -->
             </ul>
           </div>
-          <li><a href="#">学习中心</a></li>
-          <li><a href="#">学习中心</a></li>
+          <li><a href="class.html">班级</a></li>
+          <li><a href="group.html">小组</a></li>
         </ul>
         <div class="nav navbar-nav navbar-right">
           <form class="navbar-form navbar-right pull-left hidden-xs">
-            <div class="dropdown pull-left">
-              <a href="#" class="dropdown-toggle hidden-md hidden-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <div class="dropdown"> <a href="#" class="dropdown-toggle hidden-md hidden-sm" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">课程 <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li><a href="#">课程</a></li>
+                <li><a href="#">话题</a></li>
+                <li><a href="#">教师</a></li>
               </ul>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
+              <input type="text" class="form-control" placeholder="{{dataset[0].placeholder}}"> </div>
             <button type="submit" class="btn glyphicon glyphicon-search"></button>
           </form>
-          <div class="login pull-right">
-            <a href="#">登陆</a>
-            <a href="#">注册</a>
-          </div>
+          <div class="login pull-right"> <a href="#">登陆</a> <a href="#">注册</a> </div>
         </div>
       </div>
     </nav>
   </header>
   <!-- banner -->
-  <section id="banner" class="carousel slide" data-ride="carousel">
+  <section id="banner" class="carousel slide" data-ride="carousel" ng-controller="bn-ctrl">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#banner" data-slide-to="0" class="active"></li>
@@ -77,18 +81,18 @@
     </ol>
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <a style="background-image: url(images/block_picture_1471493110.jpg);" href="javascript:;"></a>
+      <div class="item {{k==0 ? 'active' : ''}}" ng-repeat="(k, v) in dataset">
+        <a style="background-image: url({{v.url}});" href="{{v.hrf}}"></a>
       </div>
-      <div class="item">
-        <a style="background-image: url(images/block_picture_1470403193.jpg);" href="javascript:;"></a>
+      <!-- <div class="item active">
+        <a style="background-image: url(images/block_picture_1471493110.jpg);" href="javascript:;"></a>
       </div>
       <div class="item">
         <a style="background-image: url(images/block_picture_1474275464.jpg);" href="javascript:;"></a>
       </div>
       <div class="item">
         <a style="background-image: url(images/block_picture_1468976358.jpg);" href="javascript:;"></a>
-      </div>
+      </div> -->
     </div>
     <!-- Controls -->
     <a class="left carousel-control" href="#banner" role="button" data-slide="prev">
@@ -102,7 +106,7 @@
       <div class="data">
         <p class="line-left">现在</p>
         <div class="number">
-          <strong>4744</strong>
+          <strong>{{dataset[0].count}}</strong>
           <p class="text">
             人在好知<br>
             学习课程
@@ -121,11 +125,11 @@
       <h2><span>热门课程</span></h2>
     </div>
     <!-- items -->
-    <div class="row carousel-inner center-block" role="listbox">
-      <div class="item active">
+    <div class="row carousel-inner center-block" role="listbox" ng-controller="hotles-ctrl">
+      <div class="item {{k==0 ? 'active' : ''}}" ng-repeat="(k, v) in dataset">
         <a class="col-xs-6" href="#">
           <div class="msg-show">
-            <div class="live-title"><h3 class="text-center">sai基础教程</h3></div>                  
+            <div class="live-title"><h3 class="text-center">{{v.tit1}}</h3></div>                  
             <p class="text-center">
               <span>加入学员:23090人</span>
             </p>      
@@ -141,21 +145,28 @@
               <span>…</span>
             </p>
           </div>
-          <img class="img-responsive" src="images/0652215cebbc706663.jpg" alt="">
+          <img class="img-responsive" ng-src="{{v.img1}}" alt="">
         </a>
         <a class="col-xs-6" href="#">
           <div class="msg-show">
-            <div class="live-title"><h3 class="text-center">sai基础教程</h3></div>                  
+            <div class="live-title"><h3 class="text-center">{{v.tit2}}</h3></div>                  
             <p class="text-center">
               <span>加入学员:23090人</span>
             </p>      
           </div>
-          <img class="img-responsive" src="images/065346a73da0138994.jpg" alt="">
+          <div class="msg-hover hidden-sm hidden-xs">
+            <img class="avatar-top" src="images/avt.jpg" alt="" />
+            <p class="up-name">up主名字</p>
+            <p class="count">现在参加，12312人已经加入课程</p>
+            <p class="avatar-group">
+              <img src="images/avt.jpg" alt="" />
+              <img src="images/avt.jpg" alt="" />
+              <img src="images/avt.jpg" alt="" />
+              <span>…</span>
+            </p>
+          </div>
+          <img class="img-responsive" ng-src="{{v.img2}}" alt="">
         </a>
-      </div>
-      <div class="item">
-        <a class="col-xs-6" href="#"><img class="img-responsive" src="images/065523b78450837537.jpg" alt=""></a>
-        <a class="col-xs-6" href="#"><img class="img-responsive" src="images/160442a63a30885777.png" alt=""></a>
       </div>
     </div>
     <!-- Controls -->
@@ -169,189 +180,80 @@
   </section>
 
   <!-- prime lesson -->
-  <section class="container prime-lesson">
+  <section class="container prime-lesson" ng-controller="prime-ctrl">
     <div class="container">
       <h2><span>精品课程</span></h2>
     </div>
-    <ul class="classify">
-      <li class="active">精品推荐</li>
-      <li>精品推荐</li>
-      <li>精品推荐</li>
-      <li>精品推荐</li>
-      <li>精品推荐</li>
-      <li>精品推荐</li>
-      <li>精品推荐</li>
-      <li>精品推荐</li>
+    <ul class="classify" ng-click="change($event);">
+      <li class="{{k==0 ? 'active' : ''}}" data-id="{{k+1}}" ng-repeat="(k, v) in pages">{{v.page}}</li>
     </ul>
     <ul class="item-list container">
       <li class="col-sm-3 col-xs-6">
-        <a href="javascript:;"><img class="main" src="images/tb-photo.jpg" alt="xxxx" /></a>
+        <a href="javascript:;"><img class="main" ng-src="{{items[0].img}}" alt="xxxx" /></a>
         <div class="lesson-msg">
           <div class="title">
-            <a href="javascript:;">快速上手淘宝摄影</a>
+            <a href="javascript:;">{{items[0].title}}</a>
           </div>
           <div class="user">
             <div class="person" data-toggle="popover" tabindex="0" role="button">
               <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
-              <span class="username">userName</span>
-              <i class="icon-daren" title="达人" daren="1"></i>
+              <span class="username">{{items[0].user}}</span>
+              <i class="icon-daren" title="达人" daren="{{items[0].daren}}"></i>
             </div>
-            <span class="price" price="99.00">￥99.00</span>
+            <span class="price" price="{{items[0].price==0?0:items[0].price}}">{{items[0].price==0?'免费':(items[0].price | currency:"￥")}}</span>
           </div>
         </div>
       </li>
-      <li class="col-sm-3 col-xs-6">
+      <li class="col-sm-3 col-xs-6" ng-repeat="v in items track by $index" ng-if="$index<3">
         <div class="item1">
-          <a href="javascript:;"><img class="main" src="images/jp-01.jpg" alt="xxxx" /></a>
+          <a href="javascript:;"><img class="main" ng-src="{{items[$index+$index+1].img}}" alt="xxxx" /></a>
           <div class="lesson-msg">
             <div class="title">
-              <a href="javascript:;">快速上手淘宝摄影</a>
+              <a href="javascript:;">{{items[$index+$index+1].title}}</a>
             </div>
             <div class="user">
               <div class="person" data-toggle="popover" tabindex="0" role="button">
                 <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
-                <span class="username">userName</span>
-                <i class="icon-daren" title="达人" daren="0"></i>
+                <span class="username">{{items[$index+$index+1].user}}</span>
+                <i class="icon-daren" title="达人" daren="{{items[$index+$index+1].daren}}"></i>
               </div>
-              <span class="price" price="0">免费</span>
+              <span class="price" price="{{items[$index+$index+1].price==0?0:1}}">{{items[$index+$index+1].price==0?'免费':(items[$index+$index+1].price | currency:"￥")}}</span>
             </div>
           </div>
         </div>
         <div class="item2">
-          <a href="javascript:;"><img class="main" src="images/jp-02.jpg" alt="xxxx" /></a>
+          <a href="javascript:;"><img class="main" ng-src="{{items[$index+$index+2].img}}" alt="xxxx" /></a>
           <div class="lesson-msg">
             <div class="title">
-              <a href="javascript:;">快速上手淘宝摄影</a>
+              <a href="javascript:;">{{items[$index+$index+2].title}}</a>
             </div>
             <div class="user">
               <div class="person" data-toggle="popover" tabindex="0" role="button">
                 <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
-                <span class="username">userName</span>
-                <i class="icon-daren" title="达人" daren="0"></i>
+                <span class="username">{{items[$index+$index+2].user}}</span>
+                <i class="icon-daren" title="达人" daren="{{items[$index+$index+2].daren}}"></i>
               </div>
-              <span class="price" price="0">免费</span>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="col-sm-3 col-xs-6">
-        <div class="item1">
-          <a href="javascript:;"><img class="main" src="images/jp-03.jpg" alt="xxxx" /></a>
-          <div class="lesson-msg">
-            <div class="title">
-              <a href="javascript:;">快速上手淘宝摄影</a>
-            </div>
-            <div class="user">
-              <div class="person" data-toggle="popover" tabindex="0" role="button">
-                <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
-                <span class="username">userName</span>
-                <i class="icon-daren" title="达人" daren="0"></i>
-              </div>
-              <span class="price" price="0">免费</span>
-            </div>
-          </div>
-        </div>
-        <div class="item2">
-          <a href="javascript:;"><img class="main" src="images/jp-04.jpg" alt="xxxx" /></a>
-          <div class="lesson-msg">
-            <div class="title">
-              <a href="javascript:;">快速上手淘宝摄影</a>
-            </div>
-            <div class="user">
-              <div class="person" data-toggle="popover" tabindex="0" role="button">
-                <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
-                <span class="username">userName</span>
-                <i class="icon-daren" title="达人" daren="0"></i>
-              </div>
-              <span class="price" price="0">免费</span>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="col-sm-3 col-xs-6">
-        <div class="item1">
-          <a href="javascript:;"><img class="main" src="images/jp-05.jpg" alt="xxxx" /></a>
-          <div class="lesson-msg">
-            <div class="title">
-              <a href="javascript:;">快速上手淘宝摄影</a>
-            </div>
-            <div class="user">
-              <div class="person" data-toggle="popover" tabindex="0" role="button">
-                <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
-                <span class="username">userName</span>
-                <i class="icon-daren" title="达人" daren="0"></i>
-              </div>
-              <span class="price" price="0">免费</span>
-            </div>
-          </div>
-        </div>
-        <div class="item2">
-          <a href="javascript:;"><img class="main" src="images/jp-06.jpg" alt="xxxx" /></a>
-          <div class="lesson-msg">
-            <div class="title">
-              <a href="javascript:;">快速上手淘宝摄影</a>
-            </div>
-            <div class="user">
-              <div class="person" data-toggle="popover" tabindex="0" role="button">
-                <img src="images/212720870038390860.jpg" alt="username" class="avatar" />
-                <span class="username">userName</span>
-                <i class="icon-daren" title="达人" daren="0"></i>
-              </div>
-              <span class="price" price="0">免费</span>
+              <span class="price" price="{{items[$index+$index+2].price==0?0:1}}">{{items[$index+$index+2].price==0?'免费':(items[$index+$index+2].price | currency:"￥")}}</span>
             </div>
           </div>
         </div>
       </li>
     </ul>
-    <div class="more container" style="margin-top: -40px; position: relative;"><a href="javascript:;">更多&gt;</a></div>
+    <div class="more container" style="margin-top: -40px; position: relative;"><a href="lessons.html">更多&gt;</a></div>
   </section>
-
   <!-- class rec -->
-  <section class="container class-rec">
+  <section class="container class-rec" ng-controller="rec-ctrl">
     <div class="container">
       <h2><span>班级推荐</span></h2>
     </div>
     <div class="row">
-      <div class="col-xs-6 col-md-3">
+      <div class="col-xs-6 col-md-3" ng-repeat="v in units">
         <div class="thumbnail">
           <div class="classroom-tag"><span>班级</span></div>
-          <img src="images/classroom.png" alt="">
+          <img datasrc="{{v.img}}" src="images/classroom.png" alt="images/classroom.png" lazyload>
           <div class="caption">
-            <h3>啊是否看好家啊</h3>
-            <p>爱是开发商开发符合看见爱上房间卡收费卡刷卡房间爱好开发和会计法开始放假卡就卡死飞机暗示法萨芬三</p>
-            <a href="javascript:;" class="btn btn-default" role="button">立即加入</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="thumbnail">
-          <div class="classroom-tag"><span>班级</span></div>
-          <img src="images/classroom.png" alt="">
-          <div class="caption">
-            <h3>啊是否看好家啊</h3>
-            <p>爱是开发商开发符合看见爱上房间卡收费卡刷卡房间爱好开发和会计法开始放假卡就卡死飞机暗示法萨芬三</p>
-            <a href="javascript:;" class="btn btn-default" role="button">立即加入</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="thumbnail">
-          <div class="classroom-tag"><span>班级</span></div>
-          <img src="images/classroom.png" alt="">
-          <div class="caption">
-            <h3>啊是否看好家啊</h3>
-            <p>爱是开发商开发符合看见爱上房间卡收费卡刷卡房间爱好开发和会计法开始放假卡就卡死飞机暗示法萨芬三</p>
-            <a href="javascript:;" class="btn btn-default" role="button">立即加入</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="thumbnail">
-          <div class="classroom-tag"><span>班级</span></div>
-          <img src="images/classroom.png" alt="">
-          <div class="caption">
-            <h3>啊是否看好家啊</h3>
-            <p>爱是开发商开发符合看见爱上房间卡收费卡刷卡房间爱好开发和会计法开始放假卡就卡死飞机暗示法萨芬三</p>
+            <h3>{{v.title}}</h3>
+            <p>{{v.des}}</p>
             <a href="javascript:;" class="btn btn-default" role="button">立即加入</a>
           </div>
         </div>
@@ -369,16 +271,16 @@
       <!-- items -->
       <div class="row carousel-inner center-block" role="listbox">
         <div class="item active">
-          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1473300683.jpg" alt=""></a>
-          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1473303419.jpg" alt=""></a>
-          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1483955463.jpg" alt=""></a>
-          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1483955463.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img lazyload class="img-responsive" datasrc="images/block_picture_1473300683.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img lazyload class="img-responsive" datasrc="images/block_picture_1473303419.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img lazyload class="img-responsive" datasrc="images/block_picture_1483955463.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img lazyload class="img-responsive" datasrc="images/block_picture_1483955463.jpg" alt=""></a>
         </div>
         <div class="item">
-          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1473303419.jpg" alt=""></a>
-          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1483955463.jpg" alt=""></a>
-          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1473300683.jpg" alt=""></a>
-          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img class="img-responsive" src="images/block_picture_1483955463.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img lazyload class="img-responsive" datasrc="images/block_picture_1473303419.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img lazyload class="img-responsive" datasrc="images/block_picture_1483955463.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img lazyload class="img-responsive" datasrc="images/block_picture_1473300683.jpg" alt=""></a>
+          <a class="col-sm-6 col-md-3 col-xs-6" href="javascript:;"><img lazyload class="img-responsive" datasrc="images/block_picture_1483955463.jpg" alt=""></a>
         </div>
       </div>
       <!-- Controls -->
@@ -562,7 +464,6 @@
       </li>
     </ul>
   </footer>
-
   <!-- friends -->
   <div class="friends">
     <div class="container">
@@ -591,6 +492,12 @@
   </ul>
 
 </body>
+<script src="js/angular.min.js"></script>
+<script src="js/mod-header.js"></script>
+<script src="js/mod-banner.js"></script>
+<script src="js/mod-hotles.js"></script>
+<script src="js/mod-prime.js"></script>
+<script src="js/mod-rec.js"></script>
 <script src="js/jquery-3.1.1.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
@@ -601,7 +508,29 @@
       if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
       s.parentNode.insertBefore(o, s);
   }
-  async('js/angular.min.js');
+  /**
+  * index Module
+  *
+  * index main mod
+  */
+  angular.module('index', [ 'header', 'banner', 'hotles', 'prime', 'class-rec' ])
+         .directive('lazyload', () => ({ // lazyload
+            restrict: 'EA',
+            replace: false,
+            link: function($scope, iElm, iAttrs) {
+              angular.element(window).on('scroll load', function() {
+                if (iElm[0].getBoundingClientRect().top < document.documentElement.clientHeight - 400) {
+                  iElm[0].src = iAttrs.datasrc;
+                }
+              });
+            }
+         }));
   async('js/index.js');
+  async('js/main.js');
+  const [ sum, me ] = [
+    (...f) => (new Function(`return(${f.join('+')})`))(),
+    () => sum('"好奇心,"', '"热爱web开发,"', '"自学"')
+  ];
+  console.log(me());
 </script>
 </html>

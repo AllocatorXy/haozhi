@@ -1,0 +1,54 @@
+.center-nav {
+  > .container {
+    > .nav {
+      > li {
+        margin: 0;
+        padding: 0;
+        float: left;
+        > a {
+          padding: 18px 40px;
+          color: #666;
+          white-space: nowrap;
+        }
+        &.act {
+          > a {
+            color: $mColor;
+          }
+        }
+        &:hover > a {
+          color: $mColor;
+        }
+        &.dropdown {
+          > .dropdown-menu {
+            border: none;
+            padding-top: none;
+            margin: 0;
+            top: 98%;
+            box-shadow: 0 10px 20px 0 rgba(99, 99, 99, .4);
+            min-width: 100%;
+            > li {
+              text-align: center;
+              font-size: 13px;
+              &:hover {
+                > a {
+                  -webkit-transition-duration: .3s;
+                  -moz-transition-duration: .3s;
+                  -ms-transition-duration: .3s;
+                  -o-transition-duration: .3s;
+                  transition-duration: .3s;
+                  color: $mColor;
+                }
+              }
+              > a {
+                padding: {
+                  top: 7px;
+                  bottom: 7px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

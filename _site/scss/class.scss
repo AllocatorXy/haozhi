@@ -1,0 +1,49 @@
+@import "./components/mixins.scss";
+@import "./components/base.scss";
+@import "./components/navbar.scss";
+@import "./components/footer.scss";
+@import "./components/friends.scss";
+
+.list {
+  padding: 0;
+  margin: 0;
+  > li {
+    list-style: none;
+    > a {
+      display: block;
+      background: {
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+      }
+    }
+  }
+}
+.bottom {
+  text-align: center;
+  background-color: #79d05f;
+  > .more {
+    display: inline-block;
+    background-color: #fea700;
+    padding: 2px 4px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+  }
+  > .container {
+    display: flex;
+    > .item {
+      color: #fff;
+      flex: 1;
+      padding: {
+        bottom: 70px;
+        left: 20px;
+        right: 20px;
+      }
+      > h3 {
+        color: inherit;
+        font-weight: normal;
+      }
+    }
+  }
+}

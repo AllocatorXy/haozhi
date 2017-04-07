@@ -79,21 +79,22 @@ body {
     width: 50px;
     height: 50px;
     &.wechat {
+      border-bottom: 1px solid #e8e8e8;
       font-size: 30px;
       line-height: 50px;
       top: 0;
-      &:hover {
+      @include hover {
         background-color: $mColor;
         color: #fff;
         border-color: $mColor;
         .qrcode {
           opacity: 1;
           filter: alpha(opacity=100);
-          -webkit-transform: scale(1, 1);
-          -moz-transform: scale(1, 1);
-          -ms-transform: scale(1, 1);
-          -o-transform: scale(1, 1);
-          transform: scale(1, 1);
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -o-transform: scale(1);
+          transform: scale(1);
         }
       }
       .qrcode {
@@ -110,11 +111,16 @@ body {
         -ms-transition-duration: .3s;
         -o-transition-duration: .3s;
         transition-duration: .3s;
-        -webkit-transform: scale(0, 1);
-        -moz-transform: scale(0, 1);
-        -ms-transform: scale(0, 1);
-        -o-transform: scale(0, 1);
-        transform: scale(0, 1);
+        -webkit-transform-origin: right center;
+        -moz-transform-origin: right center;
+        -ms-transform-origin: right center;
+        -o-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
         p {
           font-size: 14px;
           line-height: 20px;
@@ -132,6 +138,16 @@ body {
           right: -16px;
         }
       }
+      @media (max-width: 992px) {
+        .qrcode {
+          top: 72%;
+        }
+      }
+      @media (max-width: 768px) {
+        .qrcode {
+          top: 50%;
+        }
+      }
     }
     &.help,
     &.to-top {
@@ -145,7 +161,7 @@ body {
         filter: alpha(opacity=0);
         border: 1px solid #e8e8e8;
         top: -1px;
-        &:hover {
+        @include hover {
           opacity: 1;
           padding-top: 3px;
           filter: alpha(opacity=100);
@@ -173,6 +189,7 @@ body {
       }
     }
     &.to-top {
+      display: none;
       border-top: none;
       &:before {
         border: none;
@@ -209,7 +226,8 @@ body {
             font-size: 13px;
             line-height: 30px;
           }
-          &:hover:before {
+          &:hover:before,
+          &:active:before {
             top: -1px;
             color: #fff;
             border-color: $mColor;
@@ -220,7 +238,7 @@ body {
             -o-transform: scale(1, 1.03);
             transform: scale(1, 1.03);
           }
-          &:hover {
+          @include hover {
             border-color: $mColor;
             background-color: $mColor;
           }

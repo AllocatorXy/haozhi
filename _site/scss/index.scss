@@ -3,13 +3,13 @@
  * author: AllocatorXy
  * description: haozhi index scss
  */
-@import "mixins.scss";
-@import "base.scss";
-@import "navbar.scss";
-@import "slider.scss";
-@import "prime.scss";
-@import "clsrec.scss";
-@import "tags.scss";
-@import "bottom.scss";
-@import "footer.scss";
-@import "friends.scss";
+@import "./components/mixins.scss";
+@import "./components/base.scss";
+@import "./components/navbar.scss";
+@import "./components/slider.scss";
+@import "./components/prime.scss";
+@import "./components/clsrec.scss";
+@import "./components/tags.scss";
+@import "./components/bottom.scss";
+@import "./components/footer.scss";
+@import "./components/friends.scss";

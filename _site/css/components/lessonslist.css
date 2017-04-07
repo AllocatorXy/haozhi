@@ -1,0 +1,84 @@
+.prime-lesson {
+  position: relative; }
+  .prime-lesson #ad {
+    position: relative;
+    padding: 0 10px; }
+    .prime-lesson #ad > .close {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      z-index: 9999;
+      right: 20px;
+      top: 10px;
+      font-size: 16px;
+      color: #888;
+      outline: none; }
+      .prime-lesson #ad > .close:hover {
+        color: #666; }
+    .prime-lesson #ad > .carousel-inner {
+      margin-top: 0;
+      margin-bottom: 20px; }
+      .prime-lesson #ad > .carousel-inner > .item {
+        max-height: 100px;
+        background-color: #ccc; }
+  .prime-lesson .vertical .carousel-inner {
+    height: 100%; }
+  .prime-lesson .carousel.vertical .item {
+    -webkit-transition: 0.6s ease-in-out top;
+    -moz-transition: 0.6s ease-in-out top;
+    -ms-transition: 0.6s ease-in-out top;
+    -o-transition: 0.6s ease-in-out top;
+    transition: 0.6s ease-in-out top; }
+  .prime-lesson .carousel.vertical .active {
+    top: 0; }
+  .prime-lesson .carousel.vertical .next {
+    top: 100%; }
+  .prime-lesson .carousel.vertical .prev {
+    top: -100%; }
+  .prime-lesson .carousel.vertical .next.left,
+  .prime-lesson .carousel.vertical .prev.right {
+    top: 0; }
+  .prime-lesson .carousel.vertical .active.left {
+    top: -100%; }
+  .prime-lesson .carousel.vertical .active.right {
+    top: 100%; }
+  .prime-lesson .carousel.vertical .item {
+    left: 0; }
+  .prime-lesson > .lessons-rec {
+    background-color: #f9f9f9;
+    position: absolute;
+    right: 10px;
+    width: 23%;
+    border: 1px solid #f0f0f0; }
+    .prime-lesson > .lessons-rec .classroom-tag {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70px;
+      height: 50px;
+      color: #fff;
+      padding: 5px 0 0 6px;
+      overflow: hidden; }
+      .prime-lesson > .lessons-rec .classroom-tag span {
+        position: relative;
+        z-index: 2;
+        font-size: 14px; }
+      .prime-lesson > .lessons-rec .classroom-tag:after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        border: 8px solid transparent;
+        border-width: 50px;
+        border-left: 70px solid #12c888;
+        left: 0;
+        top: -50px; }
+    .prime-lesson > .lessons-rec > p {
+      font-size: 16px;
+      color: #666;
+      padding: 17px 0;
+      margin: 0; }
+    .prime-lesson > .lessons-rec > .item-list > li {
+      padding: 0; }
+
+/*# sourceMappingURL=lessonslist.css.map */
