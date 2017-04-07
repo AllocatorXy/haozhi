@@ -527,10 +527,5 @@
          }));
   async('js/index.js');
   async('js/main.js');
-  const [ sum, me ] = [
-    (...f) => (new Function(`return(${f.join('+')})`))(),
-    () => sum('"好奇心,"', '"热爱web开发,"', '"自学"')
-  ];
-  console.log(me());
 </script>
 </html>
