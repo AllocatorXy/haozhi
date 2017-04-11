@@ -1,0 +1,11 @@
+@import "mixins.scss";
+@import "base.scss";
+@import "cnt-usermsg.scss";
+@import "navbar.scss";
+@import "center-nav.scss";
+@import "center-status.scss";
+@import "footer.scss";
+@import "friends.scss";
+.content {
+  background-color: #f4f6f8;
+}

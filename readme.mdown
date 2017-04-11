@@ -1,0 +1,6 @@
+### readme
+
+- /static-ver/_site/里是纯静态页面
+- /_site/里是做过数据绑定的
+- server.js是服务器文件
+- haozhi.sql是数据库备份

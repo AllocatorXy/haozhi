@@ -1,0 +1,121 @@
+.cnt-status {
+  margin: {
+    top: 20px;
+    bottom: 20px;
+  }
+  position: relative;
+  .block {
+    background-color: #fff;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1.732px 1px rgba(0, 0, 0, .06), inset 0 0 0 rgba(0, 0, 0, 0);
+    h3 {
+      margin: 0;
+      border-bottom: 1px solid #f0f0f0;
+      height: 60px;
+      font-size: 18px;
+      line-height: 60px;
+      padding: 0 20px;
+      color: #000;
+      background-color: #fff;
+    }
+    > .box {
+      > .emp {
+        text-align: center;
+        color: #666;
+        padding: 20px 0 30px;
+        margin: 0;
+        > a {
+          color: $mColor;
+          text-decoration: none;
+        }
+      }
+    }
+    &.dynamic {
+      margin-top: 20px;
+    }
+  }
+  .right {
+    background-color: transparent;
+    > .daily {
+      > .daily-content {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        > .count {
+          > p {
+            margin: 0;
+            > span {
+              color: #ff815a;
+              font-size: 80px;
+            }
+            &:first-child {
+              color: #999;
+            }
+          }
+        }
+        > .go {
+          display: block;
+          width: 100%;
+          line-height: 50px;
+          background-color: #ff815a;
+          border-bottom: 4px solid #d1623f;
+          color: #fff;
+          text-decoration: none;
+          -webkit-transition-duration: .3s;
+          -moz-transition-duration: .3s;
+          -ms-transition-duration: .3s;
+          -o-transition-duration: .3s;
+          transition-duration: .3s;
+          &:hover {
+            background-color: #ff815a - #101010;
+          }
+          > .icon {
+            display: inline-block;
+            margin-right: 9px;
+            position: relative;
+            top: 3px;
+            background: url(../images/icon_setting.png) no-repeat;
+            background-position: -163px 0;
+            color: #000;
+            font-size: 12px;
+            line-height: 46px;
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+    }
+    > .mission {
+      margin: 20px 0;
+      > p {
+        text-align: center;
+        padding: 20px 0 30px;
+        color: #666;
+      }
+      > a {
+        text-align: center;
+        padding-bottom: 15px;
+        text-decoration: none;
+        color: #666;
+        -webkit-transition-duration: .3s;
+        -moz-transition-duration: .3s;
+        -ms-transition-duration: .3s;
+        -o-transition-duration: .3s;
+        transition-duration: .3s;
+        &:hover {
+          color: $mColor;
+        }
+      }
+    }
+    > .recent {
+      margin-bottom: 20px;
+      > p {
+        text-align: center;
+        color: #666;
+        padding: 20px 0 30px;
+      }
+    }
+  }
+
+}

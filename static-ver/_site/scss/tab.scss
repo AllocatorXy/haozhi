@@ -1,0 +1,43 @@
+.tab {
+  > ul {
+    @include clearFix;
+    margin: 20px 10px;
+    padding: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #f0f0f0;
+    > li {
+      float: left;
+      list-style: none;
+      border-top: 2px solid transparent;
+      width: 10%;
+      text-align: center;
+      &.act {
+        border-color: $mColor;
+        background-color: #fff;
+      }
+      > a {
+        display: block;
+        color: #666;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 22px 0;
+        -webkit-transition-duration: .3s;
+        -moz-transition-duration: .3s;
+        -ms-transition-duration: .3s;
+        -o-transition-duration: .3s;
+        transition-duration: .3s;
+        &:hover {
+          color: $mColor;
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      > li {
+        width: 20%;
+        > a {
+          padding: 9px 0;
+        }
+      }
+    }
+  }
+}

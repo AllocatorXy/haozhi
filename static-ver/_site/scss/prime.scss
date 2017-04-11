@@ -1,0 +1,117 @@
+.prime-lesson {
+  .classify {
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 25px;
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 10px;
+      font-size: 14px;
+      width: 82px;
+      height: 34px;
+      text-align: center;
+      line-height: 34px;
+      color: #616161;
+      border-radius: 2px;
+      cursor: pointer;
+      transition-duration: .3s;
+      &:hover,
+      &:focus {
+        background-color: $mColor;
+        color: #fff;
+      }
+      &.active {
+        background-color: $mColor;
+        color: #fff;
+      }
+    }
+  }
+  .item-list {
+    list-style: none;
+    @include clearFix;
+    padding: 0;
+    li {
+      padding: 0 10px;
+      .item1 {
+        margin-bottom: 42px;
+      }
+      .item2 {
+        margin-bottom: 60px;
+      }
+      a{
+        display: block;
+        overflow: hidden;
+        .main {
+          transition-duration: .3s;
+          width: 100%;
+          &:hover {
+            transform: scale3d(1.05, 1.05, 1);
+          }
+        }
+      }
+      .lesson-msg {
+        margin: 20px 6px;
+        width: 100%;
+        .title > a{
+          display: inline-block;
+          font-weight: bold;
+          margin-bottom: 5px;
+          color: #444;
+          text-decoration: none;
+          &:hover {
+            color: $mColor;
+            transition-duration: .3s;
+          }
+        }
+        .user {
+          @include clearFix;
+          @include popover;
+          .person {
+            float: left;
+            outline: none;
+            cursor: pointer;
+            .avatar {
+              float: left;
+              width: 20px;
+              height: 20px;
+              border-radius: 10px;
+            }
+            .username {
+              float: left;
+              line-height: 20px;
+              padding-left: 3px;
+            }
+            &:hover {
+              color: $mColor;
+              transition-duration: .3s;
+            }
+            .icon-daren {
+              float: left;
+              background: url(../images/darens-icon.png) no-repeat;
+              width: 14px;
+              height: 14px;
+              margin-top: 3px;
+              margin-left: 5px;
+              display: none;
+              cursor: default;
+              &[daren="1"] {
+                display: block;
+              }
+            }
+          }
+          .price {
+            float: right;
+            margin-right: 8px;
+            color: #fd9271;
+            line-height: 24px;
+            font-size: 14px;
+            &[price="0"] {
+              color: $mColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.tags {
+  .row {
+    border-left: 1px solid #efefef;
+    border-top: 1px solid #efefef;
+    .col-md-2 {
+      border-right: 1px solid #efefef;
+      border-bottom: 1px solid #efefef;
+      padding: 17px 10px 7px 10px;
+      a {
+        text-decoration: none;
+        color: #666;
+        img {
+          margin-bottom: 5px;
+          transition-duration: .3s;
+        }
+        &:hover img {
+          transform: scale3d(1.05, 1.05, 1);
+        }
+        p {
+          text-align: center;
+          span {
+            color: $mColor;
+          }
+        }
+      }
+    }
+  }
+}
